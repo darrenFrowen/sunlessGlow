@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sunless Glow - Professional mobile spray tanning service in Leicester. Get a natural, flawless tan in the comfort of your own home.">
+    <title>Sunless Glow - Mobile Spray Tanning Leicester</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d4a574;
+            --secondary-color: #8b6f47;
+            --accent-color: #f5e6d3;
+            --text-dark: #2c2c2c;
+            --text-light: #ffffff;
+            --background: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            padding: 120px 2rem 80px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--secondary-color);
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--accent-color);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* FAQs Section */
+        .faqs-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--accent-color);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #f0ddc4;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0 1.5rem;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #E1306C, #C13584, #833AB4, #5851DB);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--secondary-color);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 0.5rem 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Sunless Glow</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to Sunless Glow</h1>
+        <p>Professional Mobile Spray Tanning in Leicester</p>
+        <a href="#contact" class="cta-button">Book Your Tan Today</a>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>Welcome to Sunless Glow, your premier mobile spray tanning service in Leicester. We bring the salon experience to the comfort of your own home, providing you with a natural, flawless tan that enhances your natural beauty.</p>
+                <p>Our professional spray tanning service uses high-quality, skin-safe products to give you that perfect sun-kissed glow without the harmful effects of UV rays.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Mobile Service</h3>
+                    <p>We come to you! Enjoy professional spray tanning in the comfort of your own home.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Natural Look</h3>
+                    <p>Achieve a natural, streak-free tan that looks like you've just returned from holiday.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Premium Products</h3>
+                    <p>We use only the highest quality tanning solutions that are safe for your skin.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <!-- ========================================== -->
+        <!-- EDIT FAQs BELOW - Simply add or modify the faq-item divs -->
+        <!-- ========================================== -->
+        <section id="faqs">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faqs-container">
+                
+                <div class="faq-item">
+                    <div class="faq-question">How long does a spray tan last?</div>
+                    <div class="faq-answer">
+                        A spray tan typically lasts 5-7 days, depending on your skin type and aftercare. To extend the life of your tan, moisturize daily and avoid excessive exfoliation.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How should I prepare for my spray tan?</div>
+                    <div class="faq-answer">
+                        Exfoliate your skin 24 hours before your appointment, shave or wax at least 12 hours prior, and arrive with clean, dry skin free from makeup, deodorant, and moisturizer.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">When can I shower after my spray tan?</div>
+                    <div class="faq-answer">
+                        We recommend waiting 6-8 hours before your first shower. When you do shower, use lukewarm water and avoid using soap on the first rinse. Pat dry gently with a towel.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What should I wear during and after my tan?</div>
+                    <div class="faq-answer">
+                        During your appointment, wear dark, loose-fitting clothing. After your tan, continue to wear loose, dark clothing until after your first shower to avoid any transfer.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How long does the appointment take?</div>
+                    <div class="faq-answer">
+                        A typical spray tan appointment takes approximately 30-45 minutes, including preparation and drying time.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer mobile services?</div>
+                    <div class="faq-answer">
+                        Yes! We are a fully mobile service covering Leicester and surrounding areas. We bring everything needed to your home.
+                    </div>
+                </div>
+
+                <!-- TO ADD A NEW FAQ: Copy the block below and paste it above this comment -->
+                <!--
+                <div class="faq-item">
+                    <div class="faq-question">Your question here?</div>
+                    <div class="faq-answer">
+                        Your answer here.
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </section>
+        <!-- ========================================== -->
+        <!-- END OF EDITABLE FAQs SECTION -->
+        <!-- ========================================== -->
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <p>Ready to get your perfect tan? Follow us on Instagram for the latest updates, special offers, and beautiful tan results!</p>
+                <a href="https://www.instagram.com/sunlessglow_leicester" target="_blank" class="social-link">
+                    📸 Follow us on Instagram
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sunless Glow. All rights reserved. | Leicester, UK</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isActive = answer.classList.contains('active');
+                    
+                    // Close all other FAQs
+                    document.querySelectorAll('.faq-answer').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    document.querySelectorAll('.faq-question').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // Toggle current FAQ
+                    if (!isActive) {
+                        answer.classList.add('active');
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
