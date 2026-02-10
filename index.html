@@ -138,6 +138,66 @@
             line-height: 1.8;
         }
 
+        /* Studio Section */
+        .studio-section {
+            background: var(--accent-color);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+        }
+
+        .studio-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .studio-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .studio-text h3 {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .studio-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .studio-text ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .studio-text ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .studio-text ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .studio-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Services Section */
         .services-grid {
             display: grid;
@@ -310,6 +370,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#studio">Our Studio</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#faqs">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -320,7 +381,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <h1>Welcome to Sunless Glow</h1>
-        <p>Professional Mobile Spray Tanning in Leicester</p>
+        <p>Professional Spray Tanning from Home in Leicester</p>
         <a href="#contact" class="cta-button">Book Your Tan Today</a>
     </section>
 
@@ -330,18 +391,38 @@
         <section id="about">
             <h2>About Us</h2>
             <div class="about-content">
-                <p>Welcome to Sunless Glow, your premier mobile spray tanning service in Leicester. We bring the salon experience to the comfort of your own home, providing you with a natural, flawless tan that enhances your natural beauty.</p>
-                <p>Our professional spray tanning service uses high-quality, skin-safe products to give you that perfect sun-kissed glow without the harmful effects of UV rays.</p>
+                <p>Welcome to Sunless Glow, your premier home-based spray tanning service in Leicester. Operating from a dedicated, professional studio room, we provide you with a natural, flawless tan in a comfortable and private setting.</p>
+                <p>Using our state-of-the-art Sienna X Booth and high-quality, skin-safe products, we give you that perfect sun-kissed glow without the harmful effects of UV rays.</p>
+            </div>
+        </section>
+
+        <!-- Our Studio Section -->
+        <section id="studio">
+            <h2>Our Studio</h2>
+            <div class="studio-section">
+                <div class="studio-content">
+                    <img src="sienna-x-booth.jpg" alt="Sienna X Spray Tan Booth" class="studio-image">
+                    <div class="studio-text">
+                        <h3>Professional Sienna X Booth</h3>
+                        <p>Experience the luxury of a professional spray tan in our dedicated studio room, equipped with a state-of-the-art Sienna X Booth.</p>
+                        <ul>
+                            <li>Private, comfortable setting</li>
+                            <li>Professional-grade equipment</li>
+                            <li>Hygienic and climate-controlled</li>
+                            <li>Even, flawless application</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Services Section -->
         <section id="services">
-            <h2>Our Services</h2>
+            <h2>Why Choose Us</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Mobile Service</h3>
-                    <p>We come to you! Enjoy professional spray tanning in the comfort of your own home.</p>
+                    <h3>Home-Based Studio</h3>
+                    <p>Visit our dedicated, professional studio room in a comfortable home setting in Leicester.</p>
                 </div>
                 <div class="service-card">
                     <h3>Natural Look</h3>
@@ -349,7 +430,7 @@
                 </div>
                 <div class="service-card">
                     <h3>Premium Products</h3>
-                    <p>We use only the highest quality tanning solutions that are safe for your skin.</p>
+                    <p>We use only Sienna X products - the highest quality tanning solutions that are safe for your skin.</p>
                 </div>
             </div>
         </section>
@@ -398,9 +479,9 @@
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Do you offer mobile services?</div>
+                    <div class="faq-question">Where are you located?</div>
                     <div class="faq-answer">
-                        Yes! We are a fully mobile service covering Leicester and surrounding areas. We bring everything needed to your home.
+                        We operate from a dedicated studio room at our home in Leicester. Appointments are available by booking only.
                     </div>
                 </div>
 
