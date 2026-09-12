@@ -1,125 +1,110 @@
-# Sunless Glow Website
+# Sunless Glow
 
-Professional spray tanning website for Sunless Glow Leicester - a home-based spray tanning service using Sienna X products.
+A responsive single-page website for Sunless Glow, a home-based spray tanning studio in Leicester.
 
-## 🌐 Live Site
+## Live site
 
-- **Main URL:** https://sunlessglow.co.uk
-- **GitHub Pages:** https://darrenFrowen.github.io/sunlessGlow/
+- Production site: https://sunlessglow.co.uk
+- GitHub Pages: https://darrenFrowen.github.io/sunlessGlow/
 
-## 📋 About
+## Overview
 
-This is a single-page website featuring:
-- Landing page with hero section
-- About section
-- Services showcase
-- Interactive FAQs (accordion style)
-- Contact section with booking and social media links
-- Fully responsive mobile design
+This project contains the website for a beauty and tanning business, including:
 
-## 🚀 How to Update the Website
+- hero section and brand styling
+- about section and owner profile
+- service and studio information
+- photo gallery with lightbox viewing
+- interactive FAQ section
+- booking and contact details
+- mobile-friendly responsive layout
 
-### Making Changes
+## Best-practice guidance
 
-1. Open `index.html` in VS Code
-2. Make your edits
-3. Save the file
-4. Deploy to live site (see below)
+This repository is intended to be a public-facing marketing site. That means it is generally fine to keep it public on GitHub, provided there is no private or sensitive information included.
 
-### Deploying Changes
+Before publishing anything to the repo, avoid adding:
+
+- private personal details
+- personal addresses or home location data beyond what is already public
+- personal mobile numbers not intended for public use
+- client images that are not approved for public use
+- API keys or secrets
+
+For a business website hosted on GitHub Pages, a public repo is usually the standard and expected approach.
+
+## Local development
+
+Open the project in a browser or use a local static file server. For simple local testing, opening `index.html` directly is enough for most changes.
+
+## Project structure
+
+```text
+sunlessGlow/
+├── index.html
+├── CNAME
+├── README.md
+├── images/
+│   ├── louise.jpg
+│   ├── roomLargeNew.jpg
+│   └── gallery/
+├── .gitignore
+└── scripts/
+    └── git.ps1
+```
+
+## Updating the site
+
+### Quick workflow
 
 ```powershell
 git add .
-git commit -m "Description of your changes"
-git push
+git commit -m "Describe your change"
+git push origin main
 ```
 
-The site will update automatically in 1-2 minutes via GitHub Pages deployment.
+### Helper script
 
-## ✏️ Editing FAQs
+A helper script is included for easier use:
 
-FAQs are easy to edit in `index.html`:
-
-1. Look for the section marked with comments:
-   ```html
-   <!-- EDIT FAQs BELOW -->
-   ```
-
-2. To add a new FAQ, copy this template:
-   ```html
-   <div class="faq-item">
-       <div class="faq-question">Your question here?</div>
-       <div class="faq-answer">
-           Your answer here.
-       </div>
-   </div>
-   ```
-
-3. Paste it in the FAQs section
-4. Replace the question and answer text
-5. Save and deploy using the commands above
-
-## 📁 Project Structure
-
-```
-sunlessGlow/
-├── index.html          # Main website file
-├── CNAME              # Custom domain configuration
-└── README.md          # This file
+```powershell
+pwsh ./scripts/git.ps1
 ```
 
-## 🔗 Important Links
+This script will prompt for a commit message, then add, commit, and push the changes.
 
-- **Booking System:** [Fresha](https://www.fresha.com/a/sunless-glow-leicester-23-hall-road-kfobnv88)
-- **Instagram:** [@sunlessglow_leicester](https://www.instagram.com/sunlessglow_leicester)
-- **Domain Provider:** GoDaddy
-- **Hosting:** GitHub Pages (Free)
+## Editing content
 
-## 🛠️ Technologies Used
+### FAQ section
 
-- **HTML5** - Structure
-- **CSS3** - Styling with custom properties
-- **JavaScript** - Interactive FAQ accordion and mobile menu
-- **GitHub Pages** - Free hosting with automatic deployment
-- **Git** - Version control
+The FAQ content is maintained in `index.html` and can be updated in the editable FAQ block.
 
-## 📱 Features
+### Gallery
 
-- ✅ Responsive design (mobile, tablet, desktop)
-- ✅ Smooth scrolling navigation
-- ✅ Interactive FAQ accordion
-- ✅ Direct booking integration (Fresha)
-- ✅ Instagram integration
-- ✅ Mobile hamburger menu
-- ✅ SEO optimized meta tags
-- ✅ Professional color scheme
+New gallery images can be added to `images/gallery/` and then inserted into the gallery grid in `index.html`.
 
-## 🎨 Color Scheme
+## Maintenance
 
-- Primary: `#d4a574` (Bronze)
-- Secondary: `#8b6f47` (Brown)
-- Accent: `#f5e6d3` (Light Tan)
+Keep these updated regularly:
 
-## 📝 Maintenance
+- booking links
+- Instagram profile link
+- phone number and address if they change
+- gallery content and client images
+- any seasonal promotional messaging
 
-This site requires minimal maintenance:
-- Update FAQs as needed
-- Keep booking link current
-- Keep Instagram link current
-- All changes deploy automatically via Git
+## Technologies used
 
-## 💡 Tips
+- HTML
+- CSS
+- JavaScript
+- Git
+- GitHub Pages
 
-- Always test changes locally by opening `index.html` in a browser before deploying
-- Use descriptive commit messages
-- Check the live site after deploying to ensure changes appear correctly
-- DNS changes (if needed) can take up to 24 hours to propagate
+## Notes
 
-## 📞 Support
-
-For website updates or issues, refer to this README or the person who set up the site
+This site is designed for a public-facing beauty brand and is intentionally simple, fast, and easy to maintain.
 
 ---
 
-**Last Updated:** February 2026  
-**Built with ❤️ for Sunless Glow**
+Built for Sunless Glow
