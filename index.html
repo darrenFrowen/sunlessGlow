@@ -552,6 +552,419 @@
                 font-size: 0.75rem;
             }
         }
+
+        /* Warm studio redesign prototype */
+        :root {
+            --primary-color: #c98f61;
+            --secondary-color: #b97852;
+            --accent-color: #382b25;
+            --text-dark: #f7ece2;
+            --text-light: #fffaf3;
+            --background: #201815;
+            --surface: #2d211c;
+            --line: #4a362c;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text-dark);
+            font-family: Georgia, 'Times New Roman', serif;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(56, 43, 37, 0.96);
+            box-shadow: 0 8px 24px rgba(56, 43, 37, 0.12);
+        }
+
+        .logo {
+            font-family: Georgia, 'Times New Roman', serif;
+            letter-spacing: 0;
+        }
+
+        .nav-links a {
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .hero {
+            position: relative;
+            isolation: isolate;
+            background: linear-gradient(90deg, rgba(56, 43, 37, 0.92), rgba(56, 43, 37, 0.34)),
+                url('images/roomLargeNew.jpg') center / cover;
+            min-height: 640px;
+            margin-top: 60px;
+            padding: 9rem max(2rem, calc((100vw - 1100px) / 2)) 7rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            max-width: 620px;
+            margin-bottom: 1.25rem;
+            font-size: clamp(3rem, 7vw, 5.8rem);
+            line-height: 0.98;
+            letter-spacing: -0.04em;
+            text-align: left;
+        }
+
+        .hero::before {
+            content: 'PRIVATE STUDIO · LEICESTER';
+            display: block;
+            margin-bottom: 1rem;
+            color: #f2c49d;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 0.78rem;
+            font-weight: bold;
+            letter-spacing: 0.16em;
+        }
+
+        .hero p {
+            max-width: 500px;
+            margin-bottom: 1.5rem;
+            color: #fffaf3;
+            font-size: 1.35rem;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .hero .pre-care-link {
+            width: 100%;
+            max-width: none;
+            margin: 0 0 0.25rem;
+            padding: 0;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .hero p.important-link {
+            margin: 1.25rem 0 0.5rem;
+            padding: 0;
+            color: #f2c49d;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .hero > p:last-of-type {
+            display: none;
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        .hero .pre-care-link[href="#aftercare"] {
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            background: #d79a68;
+            border-radius: 4px;
+            box-shadow: none;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            padding: 0.65rem 1.5rem;
+        }
+
+        .cta-button:hover {
+            background: #e1ab7d;
+            box-shadow: none;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1160px;
+            padding: 6rem 2rem;
+        }
+
+        section {
+            margin-bottom: 7rem;
+        }
+
+        h2 {
+            margin-bottom: 2.5rem;
+            color: var(--text-dark);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            letter-spacing: -0.03em;
+        }
+
+        #about {
+            display: grid;
+            grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+            gap: 4rem;
+            align-items: center;
+        }
+
+        #about h2 {
+            grid-column: 1 / -1;
+            margin-bottom: -1rem;
+        }
+
+        .about-content {
+            max-width: none;
+            text-align: left;
+            font-size: 1.05rem;
+        }
+
+        .about-image {
+            grid-row: span 2;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 2px;
+            box-shadow: 16px 16px 0 #6e4834;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+        }
+
+        .pre-care-section {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 2px;
+            padding: 3.5rem clamp(1.5rem, 5vw, 5rem);
+            box-shadow: 0 18px 50px rgba(93, 65, 45, 0.06);
+        }
+
+        .pre-care-section h2,
+        .pre-care-section h3 {
+            color: var(--secondary-color);
+        }
+
+        .services-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1px;
+            margin-top: 0;
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+
+        .service-card {
+            min-height: 250px;
+            padding: 2rem 1.5rem;
+            border-radius: 0;
+            background: var(--surface);
+            text-align: left;
+        }
+
+        .service-card:hover {
+            background: #382820;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .service-card h3 {
+            color: var(--text-dark);
+            font-size: 1.35rem;
+        }
+
+        .gallery-grid {
+            grid-template-columns: repeat(12, 1fr);
+            gap: 0.75rem;
+            margin-top: 0;
+        }
+
+        .gallery-item {
+            grid-column: span 4;
+            border-radius: 2px;
+            box-shadow: none;
+        }
+
+        .gallery-item:nth-child(1),
+        .gallery-item:nth-child(4) {
+            grid-column: span 5;
+        }
+
+        .gallery-item:nth-child(2),
+        .gallery-item:nth-child(3),
+        .gallery-item:nth-child(5),
+        .gallery-item:nth-child(6),
+        .gallery-item:nth-child(7) {
+            grid-column: span 3;
+        }
+
+        .gallery-item img {
+            height: 300px;
+        }
+
+        .gallery-item:nth-child(1) img,
+        .gallery-item:nth-child(4) img {
+            height: 380px;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.02);
+        }
+
+        .contact-content,
+        .contact-content h2 {
+            text-align: left;
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-actions .cta-button,
+        .contact-actions .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 220px;
+            min-height: 52px;
+            margin: 0;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            box-shadow: none;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.25;
+            text-align: center;
+        }
+
+        .contact-actions .social-link {
+            background: linear-gradient(135deg, #d62976, #4f46c8);
+        }
+
+        .review-stars {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-size: clamp(1.6rem, 8vw, 3rem);
+            line-height: 1;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+
+        .reviews-source {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+
+        .reviews-source:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        @media (max-width: 520px) {
+            .contact-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-actions .cta-button,
+            .contact-actions .social-link {
+                width: 100%;
+                max-width: 260px;
+            }
+        }
+
+        footer {
+            background: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding-top: 2rem;
+            }
+
+            .hero {
+                min-height: 680px;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 5rem 1.5rem 4rem;
+                background-position: 63% center;
+            }
+
+            .hero h1 {
+                font-size: clamp(3.2rem, 14vw, 4.5rem);
+                text-align: left;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero .pre-care-link,
+            .hero p.important-link {
+                text-align: left;
+            }
+
+            #about {
+                display: block;
+                margin-bottom: 2rem;
+            }
+
+            #services {
+                margin-bottom: 0;
+            }
+
+            #pre-care {
+                padding-top: 2rem;
+            }
+
+            #about h2 {
+                margin-bottom: 2rem;
+            }
+
+            .about-image {
+                margin: 0 auto 3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                min-height: auto;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-item,
+            .gallery-item:nth-child(1),
+            .gallery-item:nth-child(2),
+            .gallery-item:nth-child(3),
+            .gallery-item:nth-child(4),
+            .gallery-item:nth-child(5),
+            .gallery-item:nth-child(6),
+            .gallery-item:nth-child(7) {
+                grid-column: span 1;
+            }
+
+            .gallery-item img,
+            .gallery-item:nth-child(1) img,
+            .gallery-item:nth-child(4) img {
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero {
+                min-height: 620px;
+                padding-inline: 1.25rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
     </style>
 </head>
 
@@ -584,9 +997,12 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <h1>Welcome to Sunless Glow</h1>
-        <p class="pre-care-link important-link">⭐ Please Read Before Booking ⭐</p>
+        <p>Professional spray tanning from a private home studio in Leicester, with a natural finish made for you.</p>
+        <p class="pre-care-link important-link">Please Read Before Booking</p>
         <a class="pre-care-link" href="#pre-care">Pre-Care Advice</a>
         <a class="pre-care-link" href="#aftercare">Aftercare Advice</a>
+        <a class="cta-button" href="https://www.fresha.com/book-now/sunless-glow-guokek15/all-offer?share=true&pId=1411715"
+            target="_blank">Book Your Tan</a>
         <img class="hero-image" src="images/roomLargeNew.jpg" alt="Spray Tanning Studio Room" />
         <p>Professional Spray Tanning from my Home in Leicester</p>
     </section>
@@ -746,25 +1162,25 @@
             <h2>Photo Gallery</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="images/gallery/grace.png" alt="Sunless Glow client spray tan result - Grace" />
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery/Jenna.jpg" alt="Sunless Glow client spray tan result - Jenna" />
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery/jenna2.jpg" alt="Sunless Glow client spray tan result - Jenna" />
-                </div>
-                <div class="gallery-item">
                     <img src="images/gallery/katie.jpg" alt="Sunless Glow client spray tan result - Katie" />
                 </div>
                 <div class="gallery-item">
                     <img src="images/gallery/katie2.jpg" alt="Sunless Glow client spray tan result - Katie" />
                 </div>
                 <div class="gallery-item">
+                    <img src="images/gallery/grace.png" alt="Sunless Glow client spray tan result - Grace" />
+                </div>
+                <div class="gallery-item">
                     <img src="images/gallery/lauren.jpg" alt="Sunless Glow client spray tan result - Lauren" />
                 </div>
                 <div class="gallery-item">
+                    <img src="images/gallery/Jenna.jpg" alt="Sunless Glow client spray tan result - Jenna" />
+                </div>
+                <div class="gallery-item">
                     <img src="images/gallery/remi.jpg" alt="Sunless Glow client spray tan result - Remi" />
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/jenna2.jpg" alt="Sunless Glow client spray tan result - Jenna" />
                 </div>
                 <!-- Add more client photos to the images/gallery folder, then add an entry here, e.g.: -->
                 <!--
@@ -904,9 +1320,10 @@
                     Don't just take our word for it! See what our satisfied clients have to say about their experience at Sunless Glow.
                 </p>
                 <div style="background: var(--accent-color); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
-                    <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+                    <div class="review-stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
                     <p style="font-size: 1.3rem; font-weight: bold; color: var(--secondary-color); margin-bottom: 0.5rem;">5.0 Star Rating</p>
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Based on our Google Reviews</p>
+                    <a class="reviews-source" href="https://www.google.com/maps/search/?api=1&query=Sunless+Glow+Leicester+LE7+9SY"
+                        target="_blank">Based on our Google Reviews</a>
                 </div>
                 <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
                     <a href="https://www.google.com/maps/search/?api=1&query=Sunless+Glow+Leicester+LE7+9SY" target="_blank" class="cta-button" style="min-width: 180px;">
@@ -961,13 +1378,13 @@
                 </div>
                 <p>Ready to get your perfect tan? Book your appointment online or follow us on Instagram for the latest
                     updates, special offers, and beautiful tan results!</p>
-                <a href="https://www.fresha.com/a/sunless-glow-leicester-23-hall-road-kfobnv88" target="_blank"
-                    class="cta-button" style="margin-right: 1rem;">
-                    📅 Book Now
-                </a>
-                <a href="https://www.instagram.com/sunlessglow.leicester" target="_blank" class="social-link">
-                    📸 Follow us on Instagram
-                </a>
+                <div class="contact-actions">
+                    <a href="https://www.fresha.com/a/sunless-glow-leicester-23-hall-road-kfobnv88" target="_blank"
+                        class="cta-button">📅 Book Now</a>
+                    <a href="https://www.instagram.com/sunlessglow.leicester" target="_blank" class="social-link">
+                        📸 Follow us on Instagram
+                    </a>
+                </div>
             </div>
         </section>
     </div>
