@@ -96,10 +96,50 @@
             color: var(--text-light);
         }
 
+        .pre-care-link {
+            display: block;
+            max-width: 600px;
+            margin: 0 auto 0.5rem;
+            color: #ffe0a8;
+            padding: 0.3rem 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.4;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 224, 168, 0.65);
+            text-underline-offset: 4px;
+            transition: opacity 0.3s;
+        }
+
+        .pre-care-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .important-link {
+            max-width: 760px;
+            color: #ffe8a3;
+            font-size: 1.25rem;
+            font-style: normal;
+            text-decoration: none;
+        }
+
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             color: var(--text-light);
+        }
+
+        .hero-image {
+            width: min(100%, 600px);
+            height: 500px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            display: block;
         }
 
         .cta-button {
@@ -146,6 +186,53 @@
             text-align: center;
             font-size: 1.1rem;
             line-height: 1.8;
+        }
+
+        .pre-care-section {
+            background: var(--accent-color);
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 4rem;
+        }
+
+        .pre-care-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .pre-care-intro {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .pre-care-section h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .pre-care-section p,
+        .pre-care-section li {
+            line-height: 1.7;
+        }
+
+        .pre-care-section ul {
+            padding-left: 1.5rem;
+        }
+
+        .pre-care-closing {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .about-image {
+            width: min(100%, 360px);
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 0 auto 0.5rem;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+            display: block;
         }
 
         /* Studio Section */
@@ -203,6 +290,10 @@
         }
 
         @media (max-width: 768px) {
+            .hero-image {
+                height: 420px;
+            }
+
             .studio-content {
                 grid-template-columns: 1fr;
             }
@@ -380,6 +471,8 @@
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#pre-care">Pre-Care</a></li>
+                <li><a href="#aftercare">Aftercare</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#faqs">FAQs</a></li>
@@ -392,19 +485,93 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <h1>Welcome to Sunless Glow</h1>
-        <img src="roomLarge.jpg" alt="Spray Tanning Studio Room"
-            style="max-width: 600px; width: 100%; max-height: 500px; object-fit: contain; border-radius: 12px; margin: 2rem auto; box-shadow: 0 4px 20px rgba(0,0,0,0.5); display: block;" />
+        <a class="pre-care-link important-link" href="#pre-care">⭐ Important: Please Read Before Booking ⭐</a>
+        <a class="pre-care-link" href="#pre-care">Pre-Care Advice</a>
+        <a class="pre-care-link" href="#aftercare">Aftercare Advice</a>
+        <img class="hero-image" src=".images/roomLargeNew.jpg" alt="Spray Tanning Studio Room" />
         <p>Professional Spray Tanning from my Home in Leicester</p>
     </section>
 
     <!-- Main Content -->
     <div class="container">
+        <!-- Spray Tan Pre-Care Section -->
+        <section class="pre-care-section" id="pre-care">
+            <h2>Spray Tan Pre-Care Advice</h2>
+            <p class="pre-care-intro">For the most flawless, even and long-lasting tan, please follow these simple
+                steps before your appointment.</p>
+
+            <h3>24–48 hours before your appointment</h3>
+            <p>✨ <strong>Exfoliate</strong><br>Give your skin a thorough exfoliation to remove dead skin cells and
+                create a smooth base for your tan. Pay particular attention to dry areas such as elbows, knees, ankles
+                and hands.</p>
+            <p>🪒 <strong>Shave or wax</strong><br>If you need to shave, wax or use hair-removal products, try to do
+                this at least 24 hours before your spray tan. This allows your skin time to settle and helps prevent
+                irritation.</p>
+
+            <h3>On the day of your appointment</h3>
+            <p>🚿 <strong>Shower</strong><br>Shower before your appointment if needed, but avoid applying moisturiser,
+                body oils or other skincare products afterwards.</p>
+            <p>🚫 <strong>No lotions or oils</strong><br>Please arrive with clean, dry skin. Avoid moisturisers, body
+                oils, perfumes, deodorants, makeup and other products on the skin immediately before your tan, as these
+                can create a barrier and affect how your tan develops.</p>
+            <p>👗 <strong>Wear loose, dark clothing</strong><br>After your spray tan, wear loose-fitting, dark clothing
+                and easy-to-slip-on footwear. Avoid tight clothing, socks and anything that may rub against the skin.</p>
+            <p>💍 <strong>Remove jewellery</strong><br>Please remove jewellery before your appointment where possible.</p>
+
+            <h3>A few extra tips</h3>
+            <ul>
+                <li>🏃 Avoid intense exercise immediately before your appointment.</li>
+                <li>♨️ Try not to book your spray tan immediately after a hot shower, sauna or steam room.</li>
+                <li>🚫 Avoid applying deodorant or perfume directly before your appointment.</li>
+                <li>💅 If you’re having a manicure or pedicure, ideally have it done before your spray tan, as soaking and
+                    exfoliating treatments afterwards can affect your tan.</li>
+                <li>🧴 If you have particularly dry skin, moisturise regularly in the days leading up to your spray tan
+                    — just make sure your skin is clean and product-free when you arrive.</li>
+            </ul>
+
+            <p class="pre-care-closing">Most importantly…<br><br>Arrive with clean, dry skin and we’ll take care of the
+                rest! 🤎</p>
+        </section>
+
+        <!-- Spray Tan Aftercare Section -->
+        <section class="pre-care-section" id="aftercare">
+            <h2>Spray Tan Aftercare Advice</h2>
+            <p class="pre-care-intro">Following these simple steps will help your tan develop evenly and fade
+                naturally.</p>
+
+            <h3>Before your first rinse</h3>
+            <p>🚿 <strong>Wait for the recommended time</strong><br>For a traditional spray tan, wait 8–12 hours before
+                your first shower. If you have chosen a rapid or express tan, follow the rinse time advised during your
+                appointment.</p>
+            <p>🚫 <strong>Keep your skin dry</strong><br>Avoid sweating, swimming, rain, hot showers, saunas and steam
+                rooms until after your first rinse, as moisture can cause streaking or uneven development.</p>
+            <p>👗 <strong>Wear loose, dark clothing</strong><br>Continue wearing loose-fitting, dark clothing and avoid
+                tight straps, socks or anything that may rub against your skin.</p>
+
+            <h3>At your first rinse</h3>
+            <p>💧 <strong>Use lukewarm water</strong><br>Rinse gently with lukewarm water until the water runs clear.
+                Avoid soap, shower gel, scrubbing or exfoliating during this first rinse.</p>
+            <p>🧴 <strong>Pat dry gently</strong><br>Use a soft towel and pat your skin dry rather than rubbing it.</p>
+
+            <h3>To help your tan last</h3>
+            <ul>
+                <li>🧴 Moisturise daily with a gentle, hydrating moisturiser to help keep your skin smooth and your tan even.</li>
+                <li>⚠️ Avoid oil-based products, as they can cause your tan to fade more quickly.</li>
+                <li>🧽 Avoid exfoliating until you are ready for your tan to fade evenly.</li>
+                <li>🛁 Keep showers lukewarm and avoid long, hot baths where possible.</li>
+                <li>☀️ Remember that a spray tan does not provide sun protection. Continue to use a broad-spectrum SPF in
+                    the sun.</li>
+            </ul>
+
+            <p class="pre-care-closing">Enjoy your glow and contact us if you have any questions about your aftercare.
+                🤎</p>
+        </section>
+
         <!-- About Section -->
         <section id="about">
             <h2>About Us</h2>
             <div class="about-content">
-                <img src="louise.jpg" alt="Louise - Sunless Glow Owner"
-                    style="max-width: 180px; width: 100%; border-radius: 50%; margin-bottom: 0.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.12); display: block; margin-left: auto; margin-right: auto;" />
+                <img class="about-image" src=".images/louiseNew.jpg" alt="Louise - Sunless Glow Owner" />
                 <div
                     style="text-align: center; font-weight: bold; font-size: 1.2rem; color: #8b6f47; margin-bottom: 1rem;">
                     Louise, Owner & Spray Tan Technician</div>
