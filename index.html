@@ -400,6 +400,9 @@
             position: relative;
             max-width: min(90vw, 1100px);
             width: 100%;
+            touch-action: pan-y;
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         .gallery-lightbox-image {
@@ -410,6 +413,9 @@
             border-radius: 8px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
             background: #000;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
         }
 
         .gallery-lightbox-close,
@@ -1219,6 +1225,42 @@
                 showNextImage();
             }
         });
+
+        // Touch swipe support for mobile (iOS & Android)
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let touchEndY = 0;
+        const minSwipeDistance = 40;
+
+        lightbox.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 1) {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+                touchEndX = touchStartX;
+                touchEndY = touchStartY;
+            }
+        }, { passive: true });
+
+        lightbox.addEventListener('touchmove', (e) => {
+            if (e.touches.length === 1) {
+                touchEndX = e.touches[0].clientX;
+                touchEndY = e.touches[0].clientY;
+            }
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', () => {
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+                if (deltaX < 0) {
+                    showNextImage();
+                } else {
+                    showPreviousImage();
+                }
+            }
+        }, { passive: true });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
