@@ -117,7 +117,7 @@ This site requires minimal maintenance:
 
 ## 📞 Support
 
-For website updates or issues, refer to this README or the person who set up the site.
+For website updates or issues, refer to this README or the person who set up the site
 
 ---
 
