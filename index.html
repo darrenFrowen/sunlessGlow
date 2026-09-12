@@ -302,7 +302,8 @@
         /* Services Section */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+            justify-content: center;
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -324,6 +325,33 @@
             color: var(--secondary-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
         }
 
         /* FAQs Section */
@@ -475,7 +503,8 @@
                 <li><a href="#aftercare">Aftercare</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#gallery">Photo Gallery</a></li>
+                <!-- <li><a href="#faqs">FAQs</a></li> -->
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -494,79 +523,6 @@
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Spray Tan Pre-Care Section -->
-        <section class="pre-care-section" id="pre-care">
-            <h2>Spray Tan Pre-Care Advice</h2>
-            <p class="pre-care-intro">For the most flawless, even and long-lasting tan, please follow these simple
-                steps before your appointment.</p>
-
-            <h3>24–48 hours before your appointment</h3>
-            <p>✨ <strong>Exfoliate</strong><br>Give your skin a thorough exfoliation to remove dead skin cells and
-                create a smooth base for your tan. Pay particular attention to dry areas such as elbows, knees, ankles
-                and hands.</p>
-            <p>🪒 <strong>Shave or wax</strong><br>If you need to shave, wax or use hair-removal products, try to do
-                this at least 24 hours before your spray tan. This allows your skin time to settle and helps prevent
-                irritation.</p>
-
-            <h3>On the day of your appointment</h3>
-            <p>🚿 <strong>Shower</strong><br>Shower before your appointment if needed, but avoid applying moisturiser,
-                body oils or other skincare products afterwards.</p>
-            <p>🚫 <strong>No lotions or oils</strong><br>Please arrive with clean, dry skin. Avoid moisturisers, body
-                oils, perfumes, deodorants, makeup and other products on the skin immediately before your tan, as these
-                can create a barrier and affect how your tan develops.</p>
-            <p>👗 <strong>Wear loose, dark clothing</strong><br>After your spray tan, wear loose-fitting, dark clothing
-                and easy-to-slip-on footwear. Avoid tight clothing, socks and anything that may rub against the skin.</p>
-            <p>💍 <strong>Remove jewellery</strong><br>Please remove jewellery before your appointment where possible.</p>
-
-            <h3>A few extra tips</h3>
-            <ul>
-                <li>🏃 Avoid intense exercise immediately before your appointment.</li>
-                <li>♨️ Try not to book your spray tan immediately after a hot shower, sauna or steam room.</li>
-                <li>🚫 Avoid applying deodorant or perfume directly before your appointment.</li>
-                <li>💅 If you’re having a manicure or pedicure, ideally have it done before your spray tan, as soaking and
-                    exfoliating treatments afterwards can affect your tan.</li>
-                <li>🧴 If you have particularly dry skin, moisturise regularly in the days leading up to your spray tan
-                    — just make sure your skin is clean and product-free when you arrive.</li>
-            </ul>
-
-            <p class="pre-care-closing">Most importantly…<br><br>Arrive with clean, dry skin and we’ll take care of the
-                rest! 🤎</p>
-        </section>
-
-        <!-- Spray Tan Aftercare Section -->
-        <section class="pre-care-section" id="aftercare">
-            <h2>Spray Tan Aftercare Advice</h2>
-            <p class="pre-care-intro">Following these simple steps will help your tan develop evenly and fade
-                naturally.</p>
-
-            <h3>Before your first rinse</h3>
-            <p>🚿 <strong>Wait for the recommended time</strong><br>For a traditional spray tan, wait 8–12 hours before
-                your first shower. If you have chosen a rapid or express tan, follow the rinse time advised during your
-                appointment.</p>
-            <p>🚫 <strong>Keep your skin dry</strong><br>Avoid sweating, swimming, rain, hot showers, saunas and steam
-                rooms until after your first rinse, as moisture can cause streaking or uneven development.</p>
-            <p>👗 <strong>Wear loose, dark clothing</strong><br>Continue wearing loose-fitting, dark clothing and avoid
-                tight straps, socks or anything that may rub against your skin.</p>
-
-            <h3>At your first rinse</h3>
-            <p>💧 <strong>Use lukewarm water</strong><br>Rinse gently with lukewarm water until the water runs clear.
-                Avoid soap, shower gel, scrubbing or exfoliating during this first rinse.</p>
-            <p>🧴 <strong>Pat dry gently</strong><br>Use a soft towel and pat your skin dry rather than rubbing it.</p>
-
-            <h3>To help your tan last</h3>
-            <ul>
-                <li>🧴 Moisturise daily with a gentle, hydrating moisturiser to help keep your skin smooth and your tan even.</li>
-                <li>⚠️ Avoid oil-based products, as they can cause your tan to fade more quickly.</li>
-                <li>🧽 Avoid exfoliating until you are ready for your tan to fade evenly.</li>
-                <li>🛁 Keep showers lukewarm and avoid long, hot baths where possible.</li>
-                <li>☀️ Remember that a spray tan does not provide sun protection. Continue to use a broad-spectrum SPF in
-                    the sun.</li>
-            </ul>
-
-            <p class="pre-care-closing">Enjoy your glow and contact us if you have any questions about your aftercare.
-                🤎</p>
-        </section>
-
         <!-- About Section -->
         <section id="about">
             <h2>About Us</h2>
@@ -642,10 +598,118 @@
             </div>
         </section>
 
-        <!-- FAQs Section -->
+        <!-- Spray Tan Pre-Care Section -->
+        <section class="pre-care-section" id="pre-care">
+            <h2>Spray Tan Pre-Care Advice</h2>
+            <p class="pre-care-intro">For the most flawless, even and long-lasting tan, please follow these simple
+                steps before your appointment.</p>
+
+            <h3>24–48 hours before your appointment</h3>
+            <p>✨ <strong>Exfoliate</strong><br>Give your skin a thorough exfoliation to remove dead skin cells and
+                create a smooth base for your tan. Pay particular attention to dry areas such as elbows, knees, ankles
+                and hands.</p>
+            <p>🪒 <strong>Shave or wax</strong><br>If you need to shave, wax or use hair-removal products, try to do
+                this at least 24 hours before your spray tan. This allows your skin time to settle and helps prevent
+                irritation.</p>
+
+            <h3>On the day of your appointment</h3>
+            <p>🚿 <strong>Shower</strong><br>Shower before your appointment if needed, but avoid applying moisturiser,
+                body oils or other skincare products afterwards.</p>
+            <p>🚫 <strong>No lotions or oils</strong><br>Please arrive with clean, dry skin. Avoid moisturisers, body
+                oils, perfumes, deodorants, makeup and other products on the skin immediately before your tan, as these
+                can create a barrier and affect how your tan develops.</p>
+            <p>👗 <strong>Wear loose, dark clothing</strong><br>After your spray tan, wear loose-fitting, dark clothing
+                and easy-to-slip-on footwear. Avoid tight clothing, socks and anything that may rub against the skin.</p>
+            <p>💍 <strong>Remove jewellery</strong><br>Please remove jewellery before your appointment where possible.</p>
+
+            <h3>A few extra tips</h3>
+            <ul>
+                <li>🏃 Avoid intense exercise immediately before your appointment.</li>
+                <li>♨️ Try not to book your spray tan immediately after a hot shower, sauna or steam room.</li>
+                <li>🚫 Avoid applying deodorant or perfume directly before your appointment.</li>
+                <li>💅 If you’re having a manicure or pedicure, ideally have it done before your spray tan, as soaking and
+                    exfoliating treatments afterwards can affect your tan.</li>
+                <li>🧴 If you have particularly dry skin, moisturise regularly in the days leading up to your spray tan
+                    — just make sure your skin is clean and product-free when you arrive.</li>
+            </ul>
+
+            <p class="pre-care-closing">Most importantly…<br><br>Arrive with clean, dry skin and we’ll take care of the
+                rest! 🤎</p>
+        </section>
+
+        <!-- Spray Tan Aftercare Section -->
+        <section class="pre-care-section" id="aftercare">
+            <h2>Spray Tan Aftercare Advice</h2>
+            <p class="pre-care-intro">Following these simple steps will help your tan develop evenly and fade
+                naturally.</p>
+
+            <h3>Before your first rinse</h3>
+            <p>🚿 <strong>Wait for the recommended time</strong><br>For a traditional spray tan, wait 8–12 hours before
+                your first shower. If you have chosen a rapid or express tan, follow the rinse time advised during your
+                appointment.</p>
+            <p>🚫 <strong>Keep your skin dry</strong><br>Avoid sweating, swimming, rain, hot showers, saunas and steam
+                rooms until after your first rinse, as moisture can cause streaking or uneven development.</p>
+            <p>👗 <strong>Wear loose, dark clothing</strong><br>Continue wearing loose-fitting, dark clothing and avoid
+                tight straps, socks or anything that may rub against your skin.</p>
+
+            <h3>At your first rinse</h3>
+            <p>💧 <strong>Use lukewarm water</strong><br>Rinse gently with lukewarm water until the water runs clear.
+                Avoid soap, shower gel, scrubbing or exfoliating during this first rinse.</p>
+            <p>🧴 <strong>Pat dry gently</strong><br>Use a soft towel and pat your skin dry rather than rubbing it.</p>
+
+            <h3>To help your tan last</h3>
+            <ul>
+                <li>🧴 Moisturise daily with a gentle, hydrating moisturiser to help keep your skin smooth and your tan even.</li>
+                <li>⚠️ Avoid oil-based products, as they can cause your tan to fade more quickly.</li>
+                <li>🧽 Avoid exfoliating until you are ready for your tan to fade evenly.</li>
+                <li>🛁 Keep showers lukewarm and avoid long, hot baths where possible.</li>
+                <li>☀️ Remember that a spray tan does not provide sun protection. Continue to use a broad-spectrum SPF in
+                    the sun.</li>
+            </ul>
+
+            <p class="pre-care-closing">Enjoy your glow and contact us if you have any questions about your aftercare.
+                🤎</p>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gallery/grace.png" alt="Sunless Glow client spray tan result - Grace" />
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/Jenna.jpg" alt="Sunless Glow client spray tan result - Jenna" />
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/jenna2.jpg" alt="Sunless Glow client spray tan result - Jenna" />
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/katie.jpg" alt="Sunless Glow client spray tan result - Katie" />
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/katie2.jpg" alt="Sunless Glow client spray tan result - Katie" />
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/lauren.jpg" alt="Sunless Glow client spray tan result - Lauren" />
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/remi.jpg" alt="Sunless Glow client spray tan result - Remi" />
+                </div>
+                <!-- Add more client photos to the images/gallery folder, then add an entry here, e.g.: -->
+                <!--
+                <div class="gallery-item">
+                    <img src="images/gallery/client1.jpg" alt="Sunless Glow client spray tan result" />
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- FAQs Section (disabled - kept in a template so it isn't rendered but code is preserved) -->
         <!-- ========================================== -->
         <!-- EDIT FAQs BELOW - Simply add or modify the faq-item divs -->
         <!-- ========================================== -->
+        <template id="faqs-disabled">
         <section id="faqs">
             <h2>Frequently Asked Questions</h2>
             <div class="faqs-container">
@@ -757,6 +821,7 @@
 
             </div>
         </section>
+        </template>
         <!-- ========================================== -->
         <!-- END OF EDITABLE FAQs SECTION -->
         <!-- ========================================== -->
