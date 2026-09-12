@@ -124,9 +124,9 @@
             font-size: 1.25rem;
             font-style: normal;
             text-decoration: none;
-            white-space: nowrap;
-            padding-bottom: 0;
+            padding: 0.3rem 0.5rem 0;
             margin-bottom: 0.3rem;
+            white-space: nowrap;
         }
 
         .hero p {
@@ -468,12 +468,13 @@
                 font-size: 1.1rem;
             }
 
-            .important-link {
-                font-size: 1.1rem;
+            .hero p.important-link {
+                font-size: 1.05rem;
             }
 
             .hero {
                 margin-top: 0;
+                padding: 2rem 1.5rem 80px;
             }
 
             nav {
@@ -537,6 +538,18 @@
 
             h2 {
                 font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero p.important-link {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 340px) {
+            .hero p.important-link {
+                font-size: 0.75rem;
             }
         }
     </style>
