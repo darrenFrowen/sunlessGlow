@@ -118,12 +118,15 @@
             text-decoration: underline;
         }
 
-        .important-link {
+        .hero p.important-link {
             max-width: 760px;
-            color: #ffe8a3;
+            color: #ffe0a8;
             font-size: 1.25rem;
             font-style: normal;
             text-decoration: none;
+            white-space: nowrap;
+            padding-bottom: 0;
+            margin-bottom: 0.3rem;
         }
 
         .hero p {
@@ -450,6 +453,11 @@
             cursor: pointer;
         }
 
+        /* Mobile Quick Actions Bar */
+        .mobile-quick-actions {
+            display: none;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
@@ -458,6 +466,49 @@
 
             .hero p {
                 font-size: 1.1rem;
+            }
+
+            .important-link {
+                font-size: 1.1rem;
+            }
+
+            .hero {
+                margin-top: 0;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+                white-space: nowrap;
+            }
+
+            .mobile-quick-actions {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                background: var(--accent-color);
+                padding: 0.75rem 1rem;
+                margin-top: 60px;
+            }
+
+            .quick-action {
+                flex: 1;
+                max-width: 160px;
+                text-align: center;
+                background: var(--primary-color);
+                color: var(--text-light);
+                text-decoration: none;
+                font-size: 0.95rem;
+                font-weight: 600;
+                padding: 0.6rem 1rem;
+                border-radius: 6px;
+            }
+
+            .quick-action:hover {
+                opacity: 0.8;
             }
 
             .nav-links {
@@ -511,10 +562,16 @@
         </nav>
     </header>
 
+    <!-- Mobile Quick Actions -->
+    <div class="mobile-quick-actions">
+        <a class="quick-action" href="#services">Services</a>
+        <a class="quick-action" href="#gallery">Gallery</a>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <h1>Welcome to Sunless Glow</h1>
-        <a class="pre-care-link important-link" href="#pre-care">⭐ Important: Please Read Before Booking ⭐</a>
+        <p class="pre-care-link important-link">⭐ Please Read Before Booking ⭐</p>
         <a class="pre-care-link" href="#pre-care">Pre-Care Advice</a>
         <a class="pre-care-link" href="#aftercare">Aftercare Advice</a>
         <img class="hero-image" src="images/roomLargeNew.jpg" alt="Spray Tanning Studio Room" />
